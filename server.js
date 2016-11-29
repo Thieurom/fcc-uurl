@@ -11,7 +11,7 @@ app.use('/static', express.static('public'));
 
 // Home page route
 app.get('/', (req, res) => {
-    res.send('It works!');
+    res.sendFile('index.html', {root: './public'});
 });
 
 // Listen on incoming requests
