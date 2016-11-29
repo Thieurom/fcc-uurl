@@ -1,0 +1,27 @@
+{
+  "name": "fcc-uurl",
+  "version": "1.0.0",
+  "description": "URL Shortener Microservice",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thieurom/fcc-uurl.git"
+  },
+  "author": "doanthieu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thieurom/fcc-uurl/issues"
+  },
+  "homepage": "https://github.com/Thieurom/fcc-uurl#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11"
+  },
+  "engines": {
+    "node": "6.9.1",
+    "npm": "3.10.8"
+  }
+}
