@@ -58,6 +58,31 @@ app.get('/shorten/:url(*)', (req, res) => {
     }
 });
 
+// Short url route
+app.get('/:shortUrl', (req, res) => {
+    let shortUrl = req.protocol + '://' + req.hostname + '/' + req.params.shortUrl;
+    let url = '';
+
+    MongoClient.connect(DATABASE, (err, db) => {
+        if (err) throw err;
+        let collection = db.collection('shortUrls');
+
+        collection.findOne({shortUrl: shortUrl}
+        , (err, doc) => {
+            if (err) throw err;
+
+            if (doc) {
+                url = doc.url;
+                res.redirect(url);
+            } else {
+                res.json({error: 'Can\'t find this url in database.'});
+            }
+
+            db.close();
+        });
+    });
+});
+
 // Listen on incoming requests
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT} ...`);
