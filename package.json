@@ -18,10 +18,13 @@
   "homepage": "https://github.com/Thieurom/fcc-uurl#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "mongodb": "^2.2.11"
+    "mongodb": "^2.2.11",
+    "string-hash": "^1.1.1",
+    "valid-url": "^1.0.9"
   },
   "engines": {
     "node": "6.9.1",
     "npm": "3.10.8"
-  }
+  },
+  "devDependencies": {}
 }
