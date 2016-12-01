@@ -6,7 +6,7 @@ const service = require('../service/service')
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.sendFile('index.html', { root: '../public' });
+  res.sendFile('index.html', { root: './public' });
 });
 
 router.get('/:hashNumber', (req, res) => {
